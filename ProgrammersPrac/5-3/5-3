@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(int n, int[] arr) {
+        int answer = 0;
+        int cnt[] = new int[n];
+        for (int i:arr) {
+            cnt[i-1] += 1;
+        } for (int j=0; j<cnt.length; j++) {
+            if (cnt[j]==1) {
+                answer = j+1;
+            }
+        }
+        return answer;
+    }
+}
